@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>欢迎</title>
+    <link rel="stylesheet" type="text/css" href="./css/index.css"/>
+    <script src="js/index.js"></script>
+</head>
+
+<body>
+<div id="main" onclick="to_login()">
+    <div id="time">
+        <div id="current-time"></div>
+        <div id="current-date"></div>
+    </div>
+</div>
+<div id="user">
+    <div id="headshot"></div>
+    <div id="username">宋子傑</div>
+    <div id="pwd">
+        <label>
+            <input type="password" id="password" placeholder="PIN" autofocus="autofocus">
+            <input type="button" id="confirm" value="➜" onclick='window.location.href=("./desktop.html")'>
+        </label>
+    </div>
+    <div id="option">
+        <a href="" id="iforget">我忘记了我的PIN</a><br>
+        <p id="blank"></p>
+        <a href="" id="login-option">登录选项</a>
+    </div>
+</div>
+<div id="navi-bar">
+    <div id="user_select">
+        <div id="mini_headshot"></div>
+        <div id="mini_username">宋子傑</div>
+    </div>
+</div>
+
+</body>
+
+</html>

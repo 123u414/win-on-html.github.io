@@ -1,0 +1,227 @@
+@font-face {
+    font-family: "Microsoft YaHei UI Light";
+    src: local("Microsoft YaHei UI Light"), url("../font/msyhl.ttc") format("ttc");
+}
+
+@keyframes time_animation {
+    from {
+        opacity: 1;
+        bottom: 10%;
+    }
+
+    to {
+        opacity: 0;
+        bottom: 100%;
+    }
+}
+
+@keyframes background_blur {
+    from {
+        backdrop-filter: blur(0px);
+    }
+
+    to {
+        backdrop-filter: blur(50px);
+    }
+}
+
+* {
+    margin: 0;
+    border: 0;
+}
+
+@keyframes switch_login {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 100;
+    }
+}
+
+body {
+    background: url("../img/login-background.jpg") no-repeat center center fixed;
+    background-size: cover;
+    user-select:none;
+    -webkit-user-drag: none;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#current-time,
+#current-date {
+    color: white;
+    font-family: "Microsoft YaHei UI Light", serif;
+}
+
+#current-date {
+    font-size: 50px;
+}
+
+#current-time {
+    font-size: 110px;
+}
+
+#time {
+    position: absolute;
+    left: 1.5%;
+    bottom: 10%;
+    animation-fill-mode: forwards;
+}
+
+#user {
+    text-align: center;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    left: 50%;
+    top: 52%;
+}
+
+#headshot {
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    top: 37.5%;
+    background: url("../img/headshot.jpg");
+    background-size: contain;
+    height: 188px;
+    width: 188px;
+    border-radius: 94px;
+    opacity: 0;
+}
+
+#username {
+    text-align: center;
+    font-family: "Microsoft YaHei UI Light", serif;
+    font-size: 45px;
+    color: white;
+    transform: translate(-50%, -50%);
+    position: relative;
+    left: 50%;
+    margin: -60px 0 -15px 0;
+    opacity: 0;
+}
+
+#pwd {
+    vertical-align: middle;
+}
+
+#password {
+    position: relative;
+    left: 15px;
+    outline: none;
+    font-family: "Microsoft YaHei UI Light", serif;
+    border-style: solid;
+    border-color: grey;
+    border-width: 2px;
+    height: 32px;
+    width: 330px;
+    margin: -15px 0 15px 0;
+    opacity: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+
+#password:active {
+    background-color: white;
+}
+#password:hover {
+    border-color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+#password:focus {
+    background-color: white;
+}
+
+#password::-webkit-input-placeholder {
+    font-family: "Microsoft YaHei UI Light", serif;
+    font-size: 20px;
+}
+
+#password:-ms-input-placeholder {
+    font-family: "Microsoft YaHei UI Light", serif;
+    font-size: 20px;
+}
+
+#confirm {
+    box-sizing: content-box;
+    position: relative;
+    background-color: dimgray;
+    right: 26px;
+    outline: none;
+    font-family: "Microsoft YaHei UI Light", serif;
+    height: 32px;
+    width: 27px;
+    color: white;
+    opacity: 0;
+}
+
+#confirm:active {
+    background-color: grey;
+}
+
+#option {
+    opacity: 0;
+}
+
+#iforget {
+    font-family: "Microsoft YaHei UI", serif;
+    color: white;
+    text-decoration: none;
+    /*margin: 15px 15px 60px 15px;*/
+}
+
+#iforget:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#login-option {
+    font-family: "Microsoft YaHei UI", serif;
+    color: white;
+    text-decoration: none;
+    /*margin: 60px 0 0 0;*/
+}
+
+#login-option:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+#blank {
+    margin: 40px;
+}
+
+#user_select {
+    position: absolute;
+    left: 1.5%;
+    bottom: 10%;
+    background-color: rgb(0, 102, 180);
+    vertical-align: middle;
+    opacity: 0;
+}
+#user_select:hover{
+    background-color: rgb(0,125,221);
+}
+
+#mini_headshot {
+    background: url("../img/headshot.jpg");
+    background-size: contain;
+    margin: 10px;
+    float: left;
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+#mini_username {
+    float: left;
+    margin: 23px 100px 0 0;
+    color: white;
+    font-family: "Microsoft YaHei UI Light", serif;
+}
