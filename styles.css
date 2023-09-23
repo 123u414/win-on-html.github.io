@@ -23,7 +23,7 @@ border: #0078D7;
 border-width: 1px;
 border-style: solid;
 box-shadow: inset 0 0 0 1px rgba(246,246,247,0.92), 0 7px 19px rgba(0,0,0,0.9);
-padding: 0px;
+padding: 0;
 position: relative;
 display: inline-block;
 overflow: hidden;
@@ -101,7 +101,7 @@ background: #FFFFFF;
 font-family: 'Segoe UI', Tahoma, sans-serif;
 font-size: 12px;
 border: 2px solid white;
-padding: 0px 4px;
+padding: 0 4px;
 transition: 0.1s;
 }
 button.menubarItem:hover, button.menubarItem:active {
