@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <title>Desktop</title>
     <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0">
-    <link rel="apple-touch-icon" href="./img/small.jpg">
-    <link rel="icon" href="./img/favicon.ico" type="image/x-icon">
+
+
+    <link href="./css/normalize.css" rel="stylesheet">
+    <link href="./css/styles.css" rel="stylesheet">
+    <link href="./awesome/css/font-awesome.min.css" rel="stylesheet">
+
     <script src="js/jquery/jquery.min.js"></script>
     <script src="js/jquery/jquery-ui.min.js"></script>
     <script src="js/filesaver.min.js"></script>
-    <link href="css/normalize.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link href="./awesome/css/font-awesome.min.css" rel="stylesheet">
 
 </head>
 <body onload="startTime()">
 <div class="desktop">
-    <div class="window" id="winver">
+    <div class="window" id="win-version">
         <div class="titleFrame">
             <div class="titleContent">
-                <div class="titleText noIcon">About Windows</div>
+                <div class="iconContainer"><img class="icon"
+                                                src="img/win_logo.png" alt="notepad"></div>
+                <div class="titleText">关于 Windows</div>
             </div>
             <div class="closeBtn" id="winverClose">&times;</div>
         </div>
@@ -28,20 +31,23 @@
             <img class="winbanner" src="./img/winbanner.png" alt="Windows 10">
             <hr style="width: 91%; margin-top: 0;">
             <p class="wintext">Microsoft WindowsX On Html<br>
-                Version 1511 (OS Build 10586.CSS3)<br>
-                &copy; 2015 Microsoft Corporation. All rights reserved.<br>
-                CSS3 Recreation &copy; 2016 <a class="winlink" href="/">win10css.appspot.com</a>. All rights reserved.
+                版本&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows 10 专业版<br>
+                版本号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;22H2<br>
+                安装日期&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2023/1/12<br>
+                操作系统内部版本&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp19045.3448<br>
+                体验&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Windows Feature Experience Pack 1000.19044.1000.0<br>
+
+                作者&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;宋子傑<br>
+                学号&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8008122302<br>
+                班级&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;软工2207<br>
+                <a class="winlink"
+                   href="https://github.com/123u414/win-on-html.github.io/tree/master">在Github上查看</a>.
             </p>
-            <p class="wintext">The Windows 10 CSS3 operating system and its user interface are protected<br> by
-                trademark and other pending or existing intellectual property rights in<br> the United States and other
-                countries/regions.</p>
-            <p class="wintext">This product is licensed under the <a class="winlink"
-                                                                     href="https://www.microsoft.com/en-us/Useterms/Retail/Windows/10/UseTerms_Retail_Windows_10_English.htm">Microsoft
-                Software License<br> Terms</a> to: </p>
-            <p class="wintext">Someone<br>Company</p>
+
+            <p class="wintext">Microsoft<br>Company</p>
             <br>
             <div class="btnFrame">
-                <button class="winbutton" id="winverOK">OK</button>
+                <button class="winbutton" id="winverOK">确认</button>
             </div>
         </div>
     </div>
@@ -49,31 +55,30 @@
         <div class="titleFrame">
             <div class="titleContent">
                 <div class="iconContainer"><img class="icon"
-                                                src="data:image/png;base64,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"
-                                                alt=" "></div>
-                <div class="titleText">Untitled - Notepad</div>
+                                                src="img/notepad_icon.png" alt="notepad"></div>
+                <div class="titleText">未命名 - 记事本</div>
             </div>
             <div class="closeBtn" id="npClose">&times;</div>
         </div>
         <div class="winbody" id="notepadBody">
             <div class="menubar">
-                <button class="menubarItem" onclick="menuItem();">File</button>
-                <button class="menubarItem">Edit</button>
-                <button class="menubarItem">Format</button>
-                <button class="menubarItem">View</button>
-                <button class="menubarItem">Help</button>
+                <button class="menubarItem" onclick="menuItem();">文件</button>
+                <button class="menubarItem">编辑</button>
+                <button class="menubarItem">格式</button>
+                <button class="menubarItem">查看</button>
+                <button class="menubarItem">帮助</button>
             </div>
             <div id="dropdown" class="dropdown">
-                <a id="npNew">New</a>
-                <a id="npOpen"><span>Open...</span><input type="file" id="npFileSel" class="npFileSel"
+                <a id="npNew">新建</a>
+                <a id="npOpen"><span>打开...</span><input type="file" id="npFileSel" class="npFileSel"
                                                           onchange="onFileSelected(event)" accept="text/*"></a>
-                <a id="npSave">Save</a>
-                <a id="npSaveAs">Save As...</a>
+                <a id="npSave">保存</a>
+                <a id="npSaveAs">另存为...</a>
                 <hr class="dropdown-separator">
-                <a id="npPageSetup">Page Setup</a>
-                <a id="npPrint">Print...</a>
+                <a id="npPageSetup">页面设置</a>
+                <a id="npPrint">打印...</a>
                 <hr class="dropdown-separator">
-                <a id="npExit">Exit</a>
+                <a id="npExit">退出</a>
             </div>
             <label for="npTextarea"></label><textarea class="textBox" id="npTextarea"></textarea>
         </div>
@@ -81,51 +86,51 @@
     <div class="startMenu" id="startMenu" style="display: none;">
         <div class="startApps" id="startApps">
             <ul>
-                <li><a title="Notepad"><i class="icono fa fa-pencil-square-o"></i>Notepad<i
+                <li><a title="Notepad"><i class="icono fa fa-pencil-square-o"></i>记事本<i
                         class="icono2 fa fa-caret-right"></i></a></li>
                 <li><a title="Microsoft Edge"><i class="icono fa fa-edge"></i>Microsoft Edge<i
                         class="icono2 fa fa-caret-right"></i></a></li>
             </ul>
         </div>
-        <div class="btnPower" id="power" title="Power">
+        <div class="btnPower" id="power" title="电源">
             <i class="fa fa-power-off"></i>
         </div>
-        <div class="btnSettings" id="settings" title="Settings">
+        <div class="btnSettings" id="settings" title="设置">
             <i class="fa fa-cog"></i>
         </div>
-        <div class="btnUser" id="userMenu" title="User">
+        <div class="btnUser" id="userMenu" title="账户">
             <i class="fa fa-user"></i>
         </div>
-        <div class="btnExpandMenu" id="expandMenu" title="Expand">
+        <div class="btnExpandMenu" id="expandMenu" title="更多...">
             <i class="fa fa-bars"></i>
         </div>
     </div>
     <img class="SearchResults" id="SearchResults" src="img/SearchResults.png" alt=" ">
     <div class="taskbar">
-        <div class="startIconFrame" id="startIconFrame" title="Start">
+        <div class="startIconFrame" id="startIconFrame" title="开始">
             <i class="fa fa-windows"></i>
         </div>
         <form method="get" action="https://www.bing.com/search">
             <label for="taskSearch"></label><input type="text" name="q" value="" class="taskSearch" id="taskSearch"
-                                                   placeholder="Search the web and Windows">
+                                                   placeholder="在此键入进行搜索">
         </form>
-        <div class="otherIconFrame" id="taskviewIconFrame" title="Task View">
+        <div class="otherIconFrame" id="taskviewIconFrame" title="最近打开">
             <i class="fa fa-tasks"></i>
         </div>
         <div class="edgeIconFrame" id="edgeIconFrame" title="Microsoft Edge">
             <i class="fa fa-edge"></i>
         </div>
-        <div class="otherIconFrame" id="notepadIconFrame" title="Notepad">
+        <div class="otherIconFrame" id="notepadIconFrame" title="记事本">
             <i class="fa fa-pencil-square-o"></i>
         </div>
-        <div class="otherIconFrame" id="winverIconFrame" title="About Windows">
+        <div class="otherIconFrame" id="winverIconFrame" title="关于 Windows">
             <i class="fa fa-question-circle-o"></i>
         </div>
         <div class="taskClock" id="taskClockContainer">
             <div class="taskClockContent" id="taskClock">
             </div>
         </div>
-        <div class="showDesktop" id="showDesktop" title="Show Desktop"></div>
+        <div class="showDesktop" id="showDesktop" title="显示桌面"></div>
     </div>
 </div>
 <script src="js/windows.js" type="text/javascript"></script>
