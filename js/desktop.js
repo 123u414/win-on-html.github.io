@@ -2,7 +2,7 @@
 document.oncontextmenu=new Function("return false");
 // 检查用户使用浏览设备
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-    console.log("请使用最新版电脑端浏览器访问以便获得最佳效果");
+    alert("请使用最新版电脑端浏览器访问以便获得最佳效果");
 // 如果窗口太小,隐藏记事本和win版本窗口
     $("#notepad").hide()
     $("#win-version").hide()
@@ -150,12 +150,10 @@ $(document).ready(function () {
     });
 
     $("#edgeIconFrame").click(function () {
-        alert("还没写完");
+        alert("敬请期待");
     });
-    // Task View (not implemented yet)
-    // Taskbar icon
     $("#taskviewIconFrame").click(function () {
-        alert("还没写完");
+        alert("敬请期待");
     });
 
     $("#startIconFrame").click(function () {

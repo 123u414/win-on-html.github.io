@@ -29,7 +29,6 @@ function getDate() {
 }
 
 function to_login() {
-
     let time = document.getElementById("time");
     let main=document.getElementById("main");
     let headshot=document.getElementById("headshot");

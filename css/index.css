@@ -19,7 +19,6 @@
     from {
         backdrop-filter: blur(0px);
     }
-
     to {
         backdrop-filter: blur(50px);
     }
