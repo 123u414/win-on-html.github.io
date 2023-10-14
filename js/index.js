@@ -51,3 +51,12 @@ function to_login() {
     option.style.animation="switch_login 0.75s 0.25s forwards";
     user_select.style.animation="switch_login 0.75s 0.25s forwards";
 }
+
+function verify(){
+    let pwd = document.getElementById("password");
+    if(pwd.value==="123"){
+        window.location.href=("./desktop.html");
+    }else{
+        alert("密码错误");
+    }
+}

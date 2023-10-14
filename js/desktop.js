@@ -17,7 +17,7 @@ function menuItem() {
     $('#dropdown').toggle();
 }
 
-// File uploader
+// 上传文件
 function onFileSelected(event) {
     dropHide();
     var selectedFile = event.target.files[0];
@@ -38,7 +38,7 @@ function dropHide() {
 function checkMins(i) {
     if (i < 10) {
         i = "0" + i
-    }  // add zero in front of numbers < 10
+    }  // 小于10,前面加个0
     return i;
 }
 
@@ -141,7 +141,6 @@ $(document).ready(function () {
         WindowObject.focus();
         WindowObject.print();
         WindowObject.close();
-
     });
 
     $("#npExit").click(function () {
